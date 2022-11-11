@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 80
 
 # Start the server.
-CMD [ "node", "./server/index.js" ]
+CMD [ "npm", "run", "start" ]
