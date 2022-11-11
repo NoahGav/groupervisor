@@ -5,3 +5,5 @@ docker-compose.yaml
 .gitignore
 
 node_modules
+
+data/*

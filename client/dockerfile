@@ -1,0 +1,17 @@
+FROM node:18
+
+# Create app directory.
+WORKDIR /app
+
+# Install all dependencies.
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
+
+# Expose port 80.
+EXPOSE 80
+
+# Start the server.
+CMD [ "node", "./server/index.js" ]
