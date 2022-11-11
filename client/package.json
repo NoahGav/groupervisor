@@ -9,7 +9,6 @@
     "postbuild": "rm -rf ./server/dist && cp -r ./dist ./server/dist",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "postinstall": "cd server && npm ci --only=production",
     "start": "node ./server/index.js"
   },
   "devDependencies": {
