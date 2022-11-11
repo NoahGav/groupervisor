@@ -1,1 +1,1 @@
-console.log("Running in docker dev environment!");
+console.log(`Running on ${process.platform}.`);
