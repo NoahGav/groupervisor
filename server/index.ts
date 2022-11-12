@@ -25,10 +25,7 @@ async function initialize() {
   // Save the data every time there is an update (with a cooldown).
   doc.on("update", saveDocWithCooldown);
 
-  // Create the websocker server.
-  const server = exec("npx cross-env PORT=3000 npx y-websocket");
-  server.stdout?.on("data", data => console.log(`server: ${data}`));
-
+  // Create the websocket provider.
   new WebsocketProvider(
     "ws://localhost:3000",
     "room",
