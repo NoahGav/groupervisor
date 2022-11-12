@@ -4,7 +4,13 @@ services:
     build: ./server
     ports:
       - "3000:3000"
+    volumes:
+      - myapp:/app
+    restart: always
   client:
     build: ./client
     ports:
       - "80:80"
+    restart: always
+volumes:
+  myapp:

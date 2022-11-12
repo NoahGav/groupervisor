@@ -20,7 +20,7 @@
   // TODO - Make backups deleted after the 3rd. (Delete all old backups when creating a new one).
 
   // Check for an account. If not navigate to the account page.
-  if (!localStorage.getItem("uid")) navigate("/account");
+  if (!localStorage.getItem("uid")) navigate("/register");
 
   // Store refresh token so we can compare with server.
   const refreshToken = localStorage.getItem("refreshToken") ?? "";
